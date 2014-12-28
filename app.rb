@@ -9,7 +9,7 @@ class SNSSub < Sinatra::Base
   helpers do
     def save_message(subject, message)
       begin
-        sns_note = Notifications.new
+        sns_note = Notification.new
         sns_note.subject = subject
         sns_note.message = message
         sns_note.save
